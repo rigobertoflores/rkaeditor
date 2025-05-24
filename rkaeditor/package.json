@@ -1,0 +1,61 @@
+{
+  "name": "ngx-rkaeditor",
+  "version": "0.0.0",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "^17.3.0",
+    "@angular/common": "^17.3.0",
+    "@angular/compiler": "^17.3.0",
+    "@angular/core": "^17.3.0",
+    "@angular/forms": "^17.3.0",
+    "@angular/platform-browser": "^17.3.0",
+    "@angular/platform-browser-dynamic": "^17.3.0",
+    "@angular/router": "^17.3.0",
+    "@fortawesome/fontawesome-free": "^6.5.1",
+    "@popperjs/core": "^2.11.8",
+    "@tiptap/extension-highlight": "^2.11.5",
+    "admin-lte": "3.0",
+    "ngx-tiptap": "^10.1.0",
+    "ngx-rkaeditor": "file:dist/ngx-rkaeditor/ngx-rkaeditor-0.0.1.tgz",
+    "rxjs": "~7.8.0",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.14.3",
+    "bootstrap": "^4.5.0"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^17.3.17",
+    "@angular/cli": "^17.3.6",
+    "@angular/compiler-cli": "^17.3.0",
+    "@fortawesome/fontawesome-free": "^6.5.1",
+    "@tiptap/core": "^2.2.4",
+    "@tiptap/extension-bubble-menu": "^2.2.4",
+    "@tiptap/extension-color": "^2.2.4",
+    "@tiptap/extension-floating-menu": "^2.2.4",
+    "@tiptap/extension-placeholder": "^2.2.4",
+    "@tiptap/pm": "^2.2.4",
+    "@tiptap/starter-kit": "^2.2.4",
+    "@types/jasmine": "~5.1.0",
+    "admin-lte": "3.0",
+    "bootstrap": "^4.6.2",
+    "jasmine-core": "~5.1.0",
+    "karma": "~6.4.0",
+    "karma-chrome-launcher": "~3.2.0",
+    "karma-coverage": "~2.2.0",
+    "karma-jasmine": "~5.1.0",
+    "karma-jasmine-html-reporter": "~2.1.0",
+    "ng-packagr": "^17.3.0",
+    "typescript": "~5.4.2"
+  },
+  "peerDependencies": {
+    "@fortawesome/fontawesome-free": "^6.5.1",
+    "admin-lte": "3.0",
+    "bootstrap": "^4.5.0"
+  }
+}

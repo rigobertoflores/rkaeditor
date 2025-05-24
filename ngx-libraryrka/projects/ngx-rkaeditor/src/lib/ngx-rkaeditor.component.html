@@ -1,0 +1,104 @@
+<button type="button" class="btn btn-primary">Primary</button>
+<div class="card-body">
+    <div class="note-editor note-frame card">
+        <div class="note-dropzone">
+            <div class="note-dropzone-message"></div>
+        </div>
+        <div class="note-toolbar card-header" role="toolbar">
+
+            <div class="note-btn-group btn-group note-font">
+                <button type="button" class="note-btn btn btn-light btn-sm note-btn-bold" tabindex="-1" title=""
+                    aria-label="Bold (CTRL+B)" data-original-title="Bold (CTRL+B)" (click)="toggleBold()"
+                    [class.is-active]="isBoldActive()">
+                    <i class="fas fa-bold"></i>
+                </button>
+                <button type="button" class="note-btn btn btn-light btn-sm note-btn-underline" tabindex="-1" title=""
+                    aria-label="Underline (CTRL+U)" (click)="toggleItalic()" [class.is-active]="isItalicActive()"
+                    data-original-title="Underline (CTRL+U)">
+                    <i class="fas fa-italic"></i>
+                </button>
+                <button type="button" class="note-btn btn btn-light btn-sm note-btn-underline" tabindex="-1" title=""
+                    aria-label="Underline (CTRL+U)" (click)="toggleUndo()" [class.is-active]="isItalicActive()"
+                    data-original-title="Underline (CTRL+U)">
+                    <i class="fa-solid fa-rotate-left"></i>
+                </button>
+                <button type="button" class="note-btn btn btn-light btn-sm note-btn-underline" tabindex="-1" title=""
+                    aria-label="Underline (CTRL+U)" (click)="toggleRedo()" [class.is-active]="isItalicActive()"
+                    data-original-title="Underline (CTRL+U)">
+                    <i class="fa-solid fa-rotate-right"></i>
+                </button>
+                <button type="button" class="note-btn btn btn-light btn-sm note-btn-underline" tabindex="-1" title=""
+                    aria-label="Underline (CTRL+U)" (click)="unsetAllFormats()"
+                    data-original-title="Underline (CTRL+U)">
+                    <i class="fas fa-eraser"></i>
+                </button>
+            </div>
+            <div class="note-btn-group btn-group note-color">
+                <div class="note-btn-group btn-group note-color note-color-all">
+                    <button type="button" class="note-btn btn btn-light btn-sm note-current-color-button" tabindex="-1"
+                        title="" aria-label="Recent Color" data-original-title="Recent Color" data-backcolor="#FFFF00"
+                        data-forecolor="#000000" (click)="SetColor(selectedFontColor?.toString())"
+                        [style.backgroundColor]="selectedFontColor">
+                        <i class="fa-solid fa-font"></i></button><button type="button"
+                        class="note-btn btn btn-light btn-sm dropdown-toggle" tabindex="-1" data-toggle="dropdown"
+                        title="" aria-label="More Color" data-original-title="More Color"></button>
+                    <div class="note-dropdown-menu dropdown-menu" role="list">
+                        <div class="note-palette">
+                            <div class="note-palette-title">Elija el Color</div>
+                            <div class="note-holder" data-event="backColor">
+                                <div class="note-color-palette">
+                                    <div class="note-color-row">
+                                        <button *ngFor="let color of colors" type="button" class="note-color-btn"
+                                            (click)="setFontColor(color.value)" [title]="getColorName(color.value)"
+                                            [style.backgroundColor]="color.value" title=""
+                                            data-toggle="button"></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="note-btn-group btn-group note-color">
+                <div class="note-btn-group btn-group note-color note-color-all">
+                    <button type="button" class="note-btn btn btn-light btn-sm note-current-color-button" tabindex="-1"
+                        title="" aria-label="Recent Color" data-original-title="Recent Color" data-backcolor="#FFFF00"
+                        data-forecolor="#000000" (click)="toggleHighlightSetColor(selectedHighlightColor?.toString())"
+                        [style.backgroundColor]="selectedHighlightColor">
+                        <i class="fa-solid fa-fill-drip"></i></button><button type="button"
+                        class="note-btn btn btn-light btn-sm dropdown-toggle" tabindex="-1" data-toggle="dropdown"
+                        title="" aria-label="More Color" data-original-title="More Color"></button>
+                    <div class="note-dropdown-menu dropdown-menu" role="list">
+                        <div class="note-palette">
+                            <div class="note-palette-title">Elija el Color</div>
+                            <div class="note-holder" data-event="backColor">
+                                <div class="note-color-palette">
+                                    <div class="note-color-row">
+                                        <button *ngFor="let color of colors" type="button" class="note-color-btn"
+                                            (click)="toggleHighlight(color.value)" [title]="getColorName(color.value)"
+                                            [style.backgroundColor]="color.value" title=""
+                                            data-toggle="button"></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="note-editing-area">
+            <div class="note-handle">
+                <div class="note-control-selection">
+                    <div class="note-control-selection-bg"></div>
+                    <div class="note-control-holder note-control-nw"></div>
+                    <div class="note-control-holder note-control-ne"></div>
+                    <div class="note-control-holder note-control-sw"></div>
+                    <div class="note-control-sizing note-control-se"></div>
+                    <div class="note-control-selection-info"></div>
+                </div>
+            </div>
+            <div tiptap [editor]="editor"></div>
+        </div>
+    </div>
+</div>
