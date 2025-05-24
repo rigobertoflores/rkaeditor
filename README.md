@@ -1,7 +1,7 @@
 # 📝 RKAEditor
 
 **RKAEditor** is a lightweight, modular, and easy-to-integrate **rich text editor** for the web. Designed with simplicity, performance, and flexibility in mind, it offers essential text formatting features out of the box and can be extended for more advanced use cases.
-![image](https://github.com/user-attachments/assets/f2c3abde-4672-460a-81bc-8b52b47e4bfb)
+![Screenshot_51122](https://github.com/user-attachments/assets/719cff96-a4e8-4fe8-9ed5-0ec85c47b9ec)
 
 ---
 
@@ -22,14 +22,13 @@
 ```bash
 npm install rkaeditor
 
----
+
 ## 📦 Angular Usage
 
 If you're using RKAEditor as an Angular library, you can easily integrate it in your components with the following syntax:
 
 <lib-ngx-rkaeditor [content]="'Your initial text goes here'"></lib-ngx-rkaeditor>
 
----
 Example:
 import { NgxRkaeditorModule } from 'lib-ngx-rkaeditor';
 
