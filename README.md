@@ -1,6 +1,7 @@
 # 📝 RKAEditor
 
 **RKAEditor** is a lightweight, modular, and easy-to-integrate **rich text editor** for the web. Designed with simplicity, performance, and flexibility in mind, it offers essential text formatting features out of the box and can be extended for more advanced use cases.
+![image](https://github.com/user-attachments/assets/f2c3abde-4672-460a-81bc-8b52b47e4bfb)
 
 ---
 
