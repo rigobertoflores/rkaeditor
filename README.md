@@ -42,4 +42,29 @@ import { NgxRkaeditorModule } from 'lib-ngx-rkaeditor';
 })
 export class AppModule { }
 
+🧱 Required Angular Configuration
+
+To ensure proper styling and functionality of the RKAEditor, you must include Bootstrap, FontAwesome, and jQuery in your Angular project configuration.
+Step 1: Install dependencies
+
+Make sure these packages are installed via npm:
+
+npm install bootstrap jquery @fortawesome/fontawesome-free
+
+Step 2: Update angular.json
+
+In the angular.json file, include the following lines under the styles and scripts arrays:
+
+"styles": [
+  "node_modules/bootstrap/dist/css/bootstrap.min.css",
+  "node_modules/@fortawesome/fontawesome-free/css/all.min.css"
+],
+"scripts": [
+  "node_modules/jquery/dist/jquery.min.js",
+  "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+]
+
+This ensures Bootstrap and FontAwesome are properly loaded, along with jQuery which may be used internally for DOM operations or enhancements.
+
+Usage component
 <lib-ngx-rkaeditor [content]="'Hello, world!'"></lib-ngx-rkaeditor>
